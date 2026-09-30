@@ -147,6 +147,13 @@ h1 {
     border-top: 4px solid var(--orange);
 }
 
+.img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
 footer {
     padding: 2rem 0;
     background-color: var(--dark);
