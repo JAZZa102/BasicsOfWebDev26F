@@ -166,6 +166,17 @@ h1 {
   filter: grayscale(100%);
 }
 
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formrow {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
 #card-image {
     display: block;
     width: 100%;
