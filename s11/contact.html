@@ -1,0 +1,122 @@
+<!--
+    Centria Edu - Basics of Web Development
+
+    Original author: Ville Heikkiniemi
+    Modified by: Jaakko Hihnala
+    Last modified: 2026-10-22 (yyyy-mm-dd)
+
+    Based on the original course template.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ville Heikkiniemi">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Centria Edu | Basics of Web Development</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    centria <span>edu</span>
+                </div>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#topics">Topics</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+
+                    <span class="label">Basics of Web Development</span>
+
+                    <h1>
+                        Learn how the web works.
+                    </h1>
+
+                    <p>
+                        Start from HTML and CSS and gradually build modern,
+                        responsive and interactive web applications.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="topics" id="contact">
+            <div class="container">
+
+                <h2>Contact Us</h2>
+
+                <form class="card" action="https://httpbin.org/post" method="post">
+                    <div class="form-row">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required minlength="2" maxlength="80" />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required maxlength="120" />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="tel">Telephone:</label>
+                        <input type="tel" id="tel" name="tel" pattern="\+?[0-9]{7,15}" />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="subject">Contact Subject:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected></option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Support</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="contactmethod">How would you like to be contacted?</label>
+                        <input type="radio" required id="contact-email" name="contactmethod" value="email">
+                        <label for="contact-email">Email</label>
+                        <input type="radio" required id="contact-phone" name="contactmethod" value="phone">
+                        <label for="contact-phone">Phone</label>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Centria Edu</p>
+        </div>
+    </footer>
+
+</body>
+</html>
