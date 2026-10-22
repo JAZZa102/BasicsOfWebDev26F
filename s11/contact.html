@@ -68,22 +68,26 @@
 
                 <form class="card" action="https://httpbin.org/post" method="post">
                     <div class="form-row">
-                        <label for="name">Name:</label>
+                        <label for="name">Name (required, 2–80 characters)</label>
                         <input type="text" id="name" name="name" required minlength="2" maxlength="80" />
                     </div>
 
                     <div class="form-row">
-                        <label for="email">Email:</label>
+                        <label for="email">Email (required)</label>
                         <input type="email" id="email" name="email" required maxlength="120" />
                     </div>
 
                     <div class="form-row">
-                        <label for="tel">Telephone:</label>
-                        <input type="tel" id="tel" name="tel" pattern="\+?[0-9]{7,15}" />
+                        <label for="tel">Telephone (optional)</label>
+                        <p id="phone-help">
+                        Enter 7–15 digits, optionally starting with +.
+                        Do not use spaces or hyphens. Example: +358401234567.
+                        </p>
+                        <input type="tel" id="tel" name="tel" pattern="\+?[0-9]{7,15}" aria-describedby="phone-help" />
                     </div>
 
                     <div class="form-row">
-                        <label for="subject">Contact Subject:</label>
+                        <label for="subject">Subject (required):</label>
                         <select id="subject" name="subject" required>
                             <option value="" disabled selected></option>
                             <option value="general">General Inquiry</option>
@@ -93,7 +97,7 @@
                     </div>
 
                     <div class="form-row">
-                        <label for="contactmethod">How would you like to be contacted?</label>
+                        <label for="contactmethod">Preferred Contact Method (required):</label>
                         <input type="radio" required id="contact-email" name="contactmethod" value="email">
                         <label for="contact-email">Email</label>
                         <input type="radio" required id="contact-phone" name="contactmethod" value="phone">
@@ -101,8 +105,8 @@
                     </div>
 
                     <div class="form-row">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="message">Message (required, 20–1000 characters):</label>
+                        <textarea id="message" name="message" rows="5" required minlength="20" maxlength="1000"></textarea>
                     </div>
 
                     <button type="submit">Send</button>

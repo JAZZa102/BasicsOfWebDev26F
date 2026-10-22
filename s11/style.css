@@ -177,6 +177,18 @@ h1 {
     margin-bottom: 1rem;
 }
 
+input:not([type="radio"]):user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border: 2px dashed #b00020;
+}
+
+input:not([type="radio"]):user-valid,
+select:user-valid,
+textarea:user-valid {
+  border: 2px solid #24733c;
+}
+
 #card-image {
     display: block;
     width: 100%;
